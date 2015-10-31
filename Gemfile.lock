@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    filecache (1.0)
+    lost (1.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  filecache
+  lost

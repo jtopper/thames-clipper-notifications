@@ -15,7 +15,6 @@ if location.nil?
     cache.set(:location, location)
 end
 
-
 # API docs at http://content.tfl.gov.uk/tfl-live-bus-river-bus-arrivals-api-documentation-v16.pdf
 #
 # Following list of returned fields must be expressed in the order they appear
@@ -30,7 +29,7 @@ return_list = %w[
     ExpireTime
 ]
 
-SEARCH_RADIUS = 500 # metres to look for stops within
+SEARCH_RADIUS = 750 # metres to look for stops within
 
 # Build the API call:
 

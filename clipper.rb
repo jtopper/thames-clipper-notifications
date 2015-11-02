@@ -83,9 +83,14 @@ else
     puts "⛵️ Multiple stops nearby"
 end
 
-puts '---'
-
-results.each do |r|
+stop = ''
+results.sort { |a,b| 
+    [ a['StopPointName'], a['Delta'] ] <=> [ b['StopPointName'], b['Delta'] ]
+}.each do |r|
+    if stop != r['StopPointName']
+        puts '---'
+        stop = r['StopPointName']
+    end
     puts "#{r['Delta']} Mins from #{r['StopPointName']}: #{r['LineName']} to #{r['DestinationName']}"
 end
 
